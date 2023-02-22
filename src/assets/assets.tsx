@@ -1,3 +1,5 @@
 export const assets = {
-  images: {},
+  images: {
+    copilotBg: require('./images/copilot-bg.png'),
+  },
 };

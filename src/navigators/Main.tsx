@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator<MainParamList>();
 const MainNavigator = (): JSX.Element => {
   return (
     <Stack.Navigator
-      initialRouteName={'SplashScreen'}
+      initialRouteName={'Home'}
       screenOptions={{
         headerShown: false,
       }}>
