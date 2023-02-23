@@ -21,6 +21,7 @@
       "@screens/*": ["./screens/*"],
       "@utils/*": ["./utils/*"],
       "@constants/*": ["./constants/*"],
+      "@redux/*": ["./redux/*"],
       "@services/*": ["./services/*"]
     },
     "outDir": "dist",
