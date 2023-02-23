@@ -14,7 +14,7 @@ const styles = StyleSheet.create<IStyles>({
     flex: 1,
     backgroundColor: appTheme['color-white'],
     paddingHorizontal: 16,
-    paddingBottom: 20,
+    paddingBottom: 60,
   },
   topHeaderBody: {
     flexDirection: 'row',

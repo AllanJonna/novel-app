@@ -19,6 +19,7 @@ module.exports = {
           '@screens': './src/screens',
           '@utils': './src/utils',
           '@constants': './src/constants',
+          '@redux': './src/redux',
           '@services': './src/services',
         },
       },
