@@ -19,6 +19,7 @@ import {
   SmallNovelCard,
   Capsule,
   LongNovelCard,
+  HorizontalList,
 } from '@components';
 import {BoxGiftIcon, BellNotiificationIcon} from '@assets/Icons';
 import {assets} from '@assets/assets';
@@ -43,7 +44,7 @@ const HomeScreen = (): React.ReactElement => {
         showsVerticalScrollIndicator={false}>
         <View style={styles.topHeaderBody}>
           <FormInput
-            onChangeValue={value => console.log('ets', value)}
+            onChangeValue={value => console.log('test', value)}
             placeHolder={'Cari judul novel'}
           />
           <TouchableOpacity>
@@ -61,17 +62,12 @@ const HomeScreen = (): React.ReactElement => {
         </View>
 
         <HeaderSectionList sectionTitle="Baru Rilis" />
-        <View style={{marginBottom: 30}}>
-          <FlatList
+        {
+          <HorizontalList
             data={currentRelease}
-            nestedScrollEnabled
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={(item): string => item?.id.toString()}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => <LargeNovelCard item={item} />}
+            cardComponent={item => <LargeNovelCard item={item} />}
           />
-        </View>
+        }
 
         <HeaderSectionList sectionTitle="Chaper Baru Setiap Hari" />
         <FlatList
@@ -89,16 +85,12 @@ const HomeScreen = (): React.ReactElement => {
         />
 
         <HeaderSectionList sectionTitle="Eklusif" />
-        <View style={{marginBottom: 30}}>
-          <FlatList
+        {
+          <HorizontalList
             data={currentRelease}
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={(item): string => item?.id.toString()}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => <LargeNovelCard item={item} />}
+            cardComponent={item => <LargeNovelCard item={item} />}
           />
-        </View>
+        }
 
         <HeaderSectionList sectionTitle="Kategori" />
         <ScrollView
@@ -134,17 +126,12 @@ const HomeScreen = (): React.ReactElement => {
         />
 
         <HeaderSectionList sectionTitle="Rekomendasi" />
-        <View style={{marginBottom: 30}}>
-          <FlatList
+        {
+          <HorizontalList
             data={currentRelease}
-            nestedScrollEnabled
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            keyExtractor={(item): string => item?.id.toString()}
-            showsVerticalScrollIndicator={false}
-            renderItem={({item}) => <LargeNovelCard item={item} />}
+            cardComponent={item => <LargeNovelCard item={item} />}
           />
-        </View>
+        }
       </ScrollView>
     </View>
   );
